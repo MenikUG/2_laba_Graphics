@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _2_laba_Graphics
 {
-	class Example_1
+	class Example_2
 	{
 		Double[] x0 = new double[3];
 		Double[] y0 = new double[3];
@@ -25,46 +25,46 @@ namespace _2_laba_Graphics
 		Double[] y3 = new double[3];
 		Double[] z3 = new double[3];
 
+		int x00, y00, z00;
 		PointF[] points = new PointF[3];
 
-		public Example_1()
+		public Example_2()
 		{
-			x0[0] = 500;
-			x0[1] = 600;
-			x0[2] = 700;
-
-			y0[0] = 400;
-			y0[1] = 600;
-			y0[2] = 500;
-
-			z0[0] = 0;
-			z0[1] = 0;
-			z0[2] = 0;
+			x0[0] = 200;
+			y0[0] = 100;
+			x0[1] = 300;
+			y0[1] = 300;
+			x0[2] = 400;
+			y0[2] = 100;
 		}
 
 		public Double RotatePitch(double x, double y, double z, double alpha, int i, double[] newX, double[] newY)
 		{
 			newX[i] = x;
-			newY[i] = y * Math.Cos(alpha) - z * Math.Sin(alpha);
-			return y * Math.Sin(alpha) + z * Math.Cos(alpha);
+			newY[i] = y00 + (y - y00) * Math.Cos(alpha) + (z00 - z) * Math.Sin(alpha);
+			return z00 + (y - y00) * Math.Sin(alpha) + (z - z00) * Math.Cos(alpha);
 		}
 
 		public Double RotateYaw(double x, double y, double z, double alpha, int i, double[] newX, double[] newY)
 		{
-			newX[i] = x * Math.Cos(alpha) + z * Math.Sin(alpha);
+			newX[i] = x00 + (x - x00) * Math.Cos(alpha) + (z - z00) * Math.Sin(alpha);
 			newY[i] = y;
-			return -x * Math.Sin(alpha) + z * Math.Cos(alpha);
+			return z00 + (x00 - x) * Math.Sin(alpha) + (z - z00) * Math.Cos(alpha);
 		}
 
 		public Double RotateRoll(double x, double y, double z, double alpha, int i, double[] newX, double[] newY)
 		{
-			newX[i] = x * Math.Cos(alpha) - y * Math.Sin(alpha);
-			newY[i] = x * Math.Sin(alpha) + y * Math.Cos(alpha);
+			newX[i] = x00 + (x - x00) * Math.Cos(alpha) + (y00 - y) * Math.Sin(alpha);
+			newY[i] = y00 + (x - x00) * Math.Sin(alpha) + (y - y00) * Math.Cos(alpha);
 			return z;
 		}
 
-		public void DrawShape(Graphics graphic, int Axis, double factX, double factY, double factZ)
+		public void DrawShape(Graphics graphic, int Axis, double factX, double factY, double factZ, int Xoffset, int Yoffset, int Zoffset)
 		{
+			x00 = Xoffset;
+			y00 = Yoffset;
+			z00 = Zoffset;
+
 			for (Axis = 0; Axis < 3; Axis++)
 			{
 				if (Axis == 0)
@@ -91,6 +91,7 @@ namespace _2_laba_Graphics
 			points[1] = new PointF(Convert.ToSingle(x3[1]), Convert.ToSingle(y3[1]));
 			points[2] = new PointF(Convert.ToSingle(x3[2]), Convert.ToSingle(y3[2]));
 
+			graphic.DrawEllipse(new Pen(Color.Black, 2), new Rectangle(x00, y00, 7, 7));
 			graphic.DrawPolygon(new Pen(Color.Red, 2), points);
 			graphic.FillPolygon(new SolidBrush(Color.Blue), points);
 		}
