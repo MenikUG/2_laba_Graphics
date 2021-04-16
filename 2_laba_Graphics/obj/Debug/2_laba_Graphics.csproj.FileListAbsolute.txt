@@ -1,0 +1,10 @@
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\2_laba_Graphics.exe.config
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\2_laba_Graphics.exe
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\2_laba_Graphics.pdb
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.csprojAssemblyReference.cache
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\_2_laba_Graphics.MainForm.resources
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\_2_laba_Graphics.Properties.Resources.resources
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.csproj.GenerateResource.cache
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.csproj.CoreCompileInputs.cache
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.exe
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.pdb
