@@ -155,6 +155,7 @@ namespace _2_laba_Graphics
 						y = Convert.ToInt32(vert.y);
 						z = Convert.ToInt32(vert.z);
 					}
+					p++;
 				}
 				newz = RotateObject(Pitch, Yaw, Roll, x, y, z, ref newx, ref newy);
 				Rectangle MyBox = new Rectangle(Convert.ToInt32(newx), Convert.ToInt32(newy), 1, 1);
