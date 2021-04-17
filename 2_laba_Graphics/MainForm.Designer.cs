@@ -58,6 +58,16 @@ namespace _2_laba_Graphics
             this.Example6 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example7 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example18 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Pitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Yaw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Roll)).BeginInit();
@@ -178,7 +188,17 @@ namespace _2_laba_Graphics
             this.Example5,
             this.Example6,
             this.Example7,
-            this.Example8});
+            this.Example8,
+            this.Example9,
+            this.Example10,
+            this.Example11,
+            this.Example12,
+            this.Example13,
+            this.Example14,
+            this.Example15,
+            this.Example16,
+            this.Example17,
+            this.Example18});
             this.toolStripSplitButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -379,6 +399,76 @@ namespace _2_laba_Graphics
             this.Example8.Text = "Произвольное вращение";
             this.Example8.Click += new System.EventHandler(this.Example8_Click);
             // 
+            // Example9
+            // 
+            this.Example9.Name = "Example9";
+            this.Example9.Size = new System.Drawing.Size(1099, 32);
+            this.Example9.Text = "Визуализация вершин куба";
+            this.Example9.Click += new System.EventHandler(this.Example9_Click);
+            // 
+            // Example10
+            // 
+            this.Example10.Name = "Example10";
+            this.Example10.Size = new System.Drawing.Size(1099, 32);
+            this.Example10.Text = "Визуализация граней куба";
+            this.Example10.Click += new System.EventHandler(this.Example10_Click);
+            // 
+            // Example11
+            // 
+            this.Example11.Name = "Example11";
+            this.Example11.Size = new System.Drawing.Size(1099, 32);
+            this.Example11.Text = "Изображение сторон куба. Удаление вкрытых поверхностей";
+            this.Example11.Click += new System.EventHandler(this.Example11_Click);
+            // 
+            // Example12
+            // 
+            this.Example12.Name = "Example12";
+            this.Example12.Size = new System.Drawing.Size(1099, 32);
+            this.Example12.Text = "Параллелипед, как совокупность точек";
+            this.Example12.Click += new System.EventHandler(this.Example12_Click);
+            // 
+            // Example13
+            // 
+            this.Example13.Name = "Example13";
+            this.Example13.Size = new System.Drawing.Size(1099, 32);
+            this.Example13.Text = "Пирамида как совокупность точке";
+            this.Example13.Click += new System.EventHandler(this.Example13_Click);
+            // 
+            // Example14
+            // 
+            this.Example14.Name = "Example14";
+            this.Example14.Size = new System.Drawing.Size(1099, 32);
+            this.Example14.Text = "Цилиндр как совокупность точек";
+            this.Example14.Click += new System.EventHandler(this.Example14_Click);
+            // 
+            // Example15
+            // 
+            this.Example15.Name = "Example15";
+            this.Example15.Size = new System.Drawing.Size(1099, 32);
+            this.Example15.Text = "Сфера как совокупность точек";
+            this.Example15.Click += new System.EventHandler(this.Example15_Click);
+            // 
+            // Example16
+            // 
+            this.Example16.Name = "Example16";
+            this.Example16.Size = new System.Drawing.Size(1099, 32);
+            this.Example16.Text = "Конус как совокупность точек";
+            this.Example16.Click += new System.EventHandler(this.Example16_Click);
+            // 
+            // Example17
+            // 
+            this.Example17.Name = "Example17";
+            this.Example17.Size = new System.Drawing.Size(1099, 32);
+            this.Example17.Text = "Комбинация двух конусов";
+            this.Example17.Click += new System.EventHandler(this.Example17_Click);
+            // 
+            // Example18
+            // 
+            this.Example18.Name = "Example18";
+            this.Example18.Size = new System.Drawing.Size(1099, 32);
+            this.Example18.Text = "Объединение трех усеченных конусов";
+            this.Example18.Click += new System.EventHandler(this.Example18_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -441,6 +531,16 @@ namespace _2_laba_Graphics
 		private System.Windows.Forms.ToolStripMenuItem Example6;
 		private System.Windows.Forms.ToolStripMenuItem Example7;
 		private System.Windows.Forms.ToolStripMenuItem Example8;
+		private System.Windows.Forms.ToolStripMenuItem Example9;
+		private System.Windows.Forms.ToolStripMenuItem Example10;
+		private System.Windows.Forms.ToolStripMenuItem Example11;
+		private System.Windows.Forms.ToolStripMenuItem Example12;
+		private System.Windows.Forms.ToolStripMenuItem Example13;
+		private System.Windows.Forms.ToolStripMenuItem Example14;
+		private System.Windows.Forms.ToolStripMenuItem Example15;
+		private System.Windows.Forms.ToolStripMenuItem Example16;
+		private System.Windows.Forms.ToolStripMenuItem Example17;
+		private System.Windows.Forms.ToolStripMenuItem Example18;
 	}
 }
 

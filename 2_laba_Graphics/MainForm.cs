@@ -39,6 +39,17 @@ namespace _2_laba_Graphics
 		Example_6 ex6;
 		Example_7 ex7;
 		Example_8 ex8;
+		Example_9 ex9;
+		Example_10 ex10;
+		Example_11 ex11;
+		Example_12 ex12;
+		Example_13 ex13;
+		Example_14 ex14;
+		Example_15 ex15;
+		Example_16 ex16;
+		Example_17 ex17;
+		Example_18 ex18;
+
 
 		private void trackBar_Pitch_Scroll(object sender, EventArgs e)
 		{	// Событие на перемещение ползунка в trackBar
@@ -105,6 +116,36 @@ namespace _2_laba_Graphics
 					break;
 				case 8:
 					ex8.DrawShape(e.Graphics, X, Y, Z, angle_alpha, X0, Y0, Z0);
+					break;
+				case 9:
+					ex9.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 10:
+					ex10.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 11:
+					ex11.DrawShape(e.Graphics, X, Y, Z);
+					break;
+				case 12:
+					ex12.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 13:
+					ex13.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 14:
+					ex14.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 15:
+					ex15.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 16:
+					ex16.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 17:
+					ex17.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
+					break;
+				case 18:
+					ex18.DrawShape(e.Graphics, X, Y, Z, panel_drawing.Width, panel_drawing.Height);
 					break;
 			}
 		}
@@ -178,6 +219,97 @@ namespace _2_laba_Graphics
 			mode = 8;
 			panel_XYZ1.Visible = true;
 			panel_angle.Visible = true;
+			panel_drawing.Refresh();
+		}
+
+		private void Example9_Click(object sender, EventArgs e)
+		{   // Выбор 9 примера
+			ex9 = new Example_9();
+			mode = 9;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example10_Click(object sender, EventArgs e)
+		{   // Выбор 10 примера
+			ex10 = new Example_10();
+			mode = 10;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example11_Click(object sender, EventArgs e)
+		{   // Выбор 11 примера
+			ex11 = new Example_11();
+			mode = 11;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example12_Click(object sender, EventArgs e)
+		{   // Выбор 12 примера
+			ex12 = new Example_12();
+			mode = 12;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example13_Click(object sender, EventArgs e)
+		{   // Выбор 13 примера
+			ex13 = new Example_13();
+			mode = 13;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example14_Click(object sender, EventArgs e)
+		{	// Выбор 14 примера
+			ex14 = new Example_14();
+			mode = 14;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example15_Click(object sender, EventArgs e)
+		{	// Выбор 15 примера
+			ex15 = new Example_15();
+			mode = 15;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example16_Click(object sender, EventArgs e)
+		{   // Выбор 16 примера
+			ex16 = new Example_16();
+			mode = 16;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example17_Click(object sender, EventArgs e)
+		{   // Выбор 17 примера
+			ex17 = new Example_17();
+			mode = 17;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
+			panel_drawing.Refresh();
+		}
+
+		private void Example18_Click(object sender, EventArgs e)
+		{   // Выбор 18 примера
+			ex18 = new Example_18();
+			ex18.FillClippedCone();
+			mode = 18;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = false;
 			panel_drawing.Refresh();
 		}
 	}
