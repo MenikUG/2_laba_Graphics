@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _2_laba_Graphics
 {
@@ -29,7 +25,7 @@ namespace _2_laba_Graphics
 		PointF[] points = new PointF[3];
 
 		public Example_2()
-		{
+		{   // Задаем координаты вершин треугольника
 			x0[0] = 200;
 			y0[0] = 100;
 			x0[1] = 300;

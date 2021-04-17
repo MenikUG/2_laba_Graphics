@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Example_1.cs" />
     <Compile Include="Example_2.cs" />
+    <Compile Include="Example_3.cs" />
+    <Compile Include="Example_4.cs" />
+    <Compile Include="Example_5.cs" />
+    <Compile Include="Example_6.cs" />
+    <Compile Include="Example_7.cs" />
+    <Compile Include="Example_8.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
