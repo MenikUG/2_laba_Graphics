@@ -36,7 +36,7 @@ namespace _2_laba_Graphics
 			y0 = 100;
 			z0 = 100;
 			R = 50;
-			m = 1;
+			m = 3;
 			int ZMin, Zmax;
 			ZMin = z0 - R;
 			Zmax = z0 + R;

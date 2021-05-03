@@ -8,3 +8,12 @@ D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Gr
 D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.csproj.CoreCompileInputs.cache
 D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.exe
 D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.pdb
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\opentk.dll
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.DevIl.dll
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.FreeGlut.dll
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.OpenGl.dll
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.Platform.Windows.dll
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.DevIl.xml
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.OpenGl.xml
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\bin\Debug\Tao.Platform.Windows.xml
+D:\Projects\4 Семестр\2_laba_Graphics\2_laba_Graphics\obj\Debug\2_laba_Graphics.csproj.CopyComplete

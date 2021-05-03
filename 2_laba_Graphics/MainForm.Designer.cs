@@ -29,8 +29,11 @@ namespace _2_laba_Graphics
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel_drawing = new System.Windows.Forms.Panel();
+            this.siOGlC = new Tao.Platform.Windows.SimpleOpenGlControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trackBar_Pitch = new System.Windows.Forms.TrackBar();
             this.trackBar_Yaw = new System.Windows.Forms.TrackBar();
             this.trackBar_Roll = new System.Windows.Forms.TrackBar();
@@ -43,17 +46,6 @@ namespace _2_laba_Graphics
             this.Example2 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example3 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
-            this.trackBar_RollOffSet = new System.Windows.Forms.TrackBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.trackBar_YawOffSet = new System.Windows.Forms.TrackBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.trackBar_PitchOffset = new System.Windows.Forms.TrackBar();
-            this.panel_XYZ = new System.Windows.Forms.Panel();
-            this.panel_XYZ1 = new System.Windows.Forms.Panel();
-            this.trackBar_angle_alpha = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel_angle = new System.Windows.Forms.Panel();
             this.Example5 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example6 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example7 = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +60,32 @@ namespace _2_laba_Graphics
             this.Example16 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example17 = new System.Windows.Forms.ToolStripMenuItem();
             this.Example18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.Example19 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example20 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example21 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Example22 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
+            this.trackBar_RollOffSet = new System.Windows.Forms.TrackBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.trackBar_YawOffSet = new System.Windows.Forms.TrackBar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.trackBar_PitchOffset = new System.Windows.Forms.TrackBar();
+            this.panel_XYZ = new System.Windows.Forms.Panel();
+            this.panel_XYZ1 = new System.Windows.Forms.Panel();
+            this.trackBar_angle_alpha = new System.Windows.Forms.TrackBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel_angle = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.checkBox_oX = new System.Windows.Forms.CheckBox();
+            this.checkBox_oY = new System.Windows.Forms.CheckBox();
+            this.checkBox_oZ = new System.Windows.Forms.CheckBox();
+            this.panel_Check_XYZ = new System.Windows.Forms.Panel();
+            this.button_sbros = new System.Windows.Forms.Button();
+            this.panel_drawing.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Pitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Yaw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Roll)).BeginInit();
@@ -79,6 +97,7 @@ namespace _2_laba_Graphics
             this.panel_XYZ1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_angle_alpha)).BeginInit();
             this.panel_angle.SuspendLayout();
+            this.panel_Check_XYZ.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_drawing
@@ -88,11 +107,43 @@ namespace _2_laba_Graphics
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_drawing.BackColor = System.Drawing.SystemColors.Info;
             this.panel_drawing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_drawing.Controls.Add(this.siOGlC);
+            this.panel_drawing.Controls.Add(this.pictureBox1);
             this.panel_drawing.Location = new System.Drawing.Point(12, 41);
             this.panel_drawing.Name = "panel_drawing";
             this.panel_drawing.Size = new System.Drawing.Size(788, 630);
             this.panel_drawing.TabIndex = 2;
             this.panel_drawing.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_drawing_Paint);
+            // 
+            // siOGlC
+            // 
+            this.siOGlC.AccumBits = ((byte)(0));
+            this.siOGlC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.siOGlC.AutoCheckErrors = false;
+            this.siOGlC.AutoFinish = false;
+            this.siOGlC.AutoMakeCurrent = true;
+            this.siOGlC.AutoSwapBuffers = true;
+            this.siOGlC.BackColor = System.Drawing.Color.Black;
+            this.siOGlC.ColorBits = ((byte)(32));
+            this.siOGlC.DepthBits = ((byte)(16));
+            this.siOGlC.Location = new System.Drawing.Point(3, 3);
+            this.siOGlC.Name = "siOGlC";
+            this.siOGlC.Size = new System.Drawing.Size(780, 622);
+            this.siOGlC.StencilBits = ((byte)(0));
+            this.siOGlC.TabIndex = 1;
+            this.siOGlC.Visible = false;
+            this.siOGlC.Paint += new System.Windows.Forms.PaintEventHandler(this.siOGlC_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(784, 622);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // trackBar_Pitch
             // 
@@ -104,7 +155,7 @@ namespace _2_laba_Graphics
             this.trackBar_Pitch.Name = "trackBar_Pitch";
             this.trackBar_Pitch.Size = new System.Drawing.Size(347, 56);
             this.trackBar_Pitch.TabIndex = 3;
-            this.trackBar_Pitch.Value = 1;
+            this.trackBar_Pitch.Value = 57;
             this.trackBar_Pitch.Scroll += new System.EventHandler(this.trackBar_Pitch_Scroll);
             // 
             // trackBar_Yaw
@@ -117,7 +168,7 @@ namespace _2_laba_Graphics
             this.trackBar_Yaw.Name = "trackBar_Yaw";
             this.trackBar_Yaw.Size = new System.Drawing.Size(347, 56);
             this.trackBar_Yaw.TabIndex = 5;
-            this.trackBar_Yaw.Value = 1;
+            this.trackBar_Yaw.Value = 57;
             this.trackBar_Yaw.Scroll += new System.EventHandler(this.trackBar_Yaw_Scroll);
             // 
             // trackBar_Roll
@@ -130,7 +181,7 @@ namespace _2_laba_Graphics
             this.trackBar_Roll.Name = "trackBar_Roll";
             this.trackBar_Roll.Size = new System.Drawing.Size(347, 56);
             this.trackBar_Roll.TabIndex = 7;
-            this.trackBar_Roll.Value = 1;
+            this.trackBar_Roll.Value = 57;
             this.trackBar_Roll.Scroll += new System.EventHandler(this.trackBar_Roll_Scroll);
             // 
             // label3
@@ -170,7 +221,8 @@ namespace _2_laba_Graphics
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1});
+            this.toolStripSplitButton1,
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1230, 35);
@@ -233,6 +285,148 @@ namespace _2_laba_Graphics
             this.Example4.Size = new System.Drawing.Size(1099, 32);
             this.Example4.Text = "Поворот вокруг произвольной оси, проходящей через начало координат на угол α";
             this.Example4.Click += new System.EventHandler(this.Example4_Click);
+            // 
+            // Example5
+            // 
+            this.Example5.Name = "Example5";
+            this.Example5.Size = new System.Drawing.Size(1099, 32);
+            this.Example5.Text = "Поворот точки M (x,y,z) вокруг произвольной оси относительно произвольной точки M" +
+    "0(x0,y0,z0) на угол α";
+            this.Example5.Click += new System.EventHandler(this.Example5_Click);
+            // 
+            // Example6
+            // 
+            this.Example6.Name = "Example6";
+            this.Example6.Size = new System.Drawing.Size(1099, 32);
+            this.Example6.Text = "Вращение вокруг вектора, проходящего через начало координат на угол α";
+            this.Example6.Click += new System.EventHandler(this.Example6_Click);
+            // 
+            // Example7
+            // 
+            this.Example7.Name = "Example7";
+            this.Example7.Size = new System.Drawing.Size(1099, 32);
+            this.Example7.Text = "Вращение вокруг произвольной прямой на угол α";
+            this.Example7.Click += new System.EventHandler(this.Example7_Click);
+            // 
+            // Example8
+            // 
+            this.Example8.Name = "Example8";
+            this.Example8.Size = new System.Drawing.Size(1099, 32);
+            this.Example8.Text = "Произвольное вращение";
+            this.Example8.Click += new System.EventHandler(this.Example8_Click);
+            // 
+            // Example9
+            // 
+            this.Example9.Name = "Example9";
+            this.Example9.Size = new System.Drawing.Size(1099, 32);
+            this.Example9.Text = "Визуализация вершин куба";
+            this.Example9.Click += new System.EventHandler(this.Example9_Click);
+            // 
+            // Example10
+            // 
+            this.Example10.Name = "Example10";
+            this.Example10.Size = new System.Drawing.Size(1099, 32);
+            this.Example10.Text = "Визуализация граней куба";
+            this.Example10.Click += new System.EventHandler(this.Example10_Click);
+            // 
+            // Example11
+            // 
+            this.Example11.Name = "Example11";
+            this.Example11.Size = new System.Drawing.Size(1099, 32);
+            this.Example11.Text = "Изображение сторон куба. Удаление скрытых поверхностей";
+            this.Example11.Click += new System.EventHandler(this.Example11_Click);
+            // 
+            // Example12
+            // 
+            this.Example12.Name = "Example12";
+            this.Example12.Size = new System.Drawing.Size(1099, 32);
+            this.Example12.Text = "Параллелепипед, как совокупность точек";
+            this.Example12.Click += new System.EventHandler(this.Example12_Click);
+            // 
+            // Example13
+            // 
+            this.Example13.Name = "Example13";
+            this.Example13.Size = new System.Drawing.Size(1099, 32);
+            this.Example13.Text = "Пирамида как совокупность точек";
+            this.Example13.Click += new System.EventHandler(this.Example13_Click);
+            // 
+            // Example14
+            // 
+            this.Example14.Name = "Example14";
+            this.Example14.Size = new System.Drawing.Size(1099, 32);
+            this.Example14.Text = "Цилиндр как совокупность точек";
+            this.Example14.Click += new System.EventHandler(this.Example14_Click);
+            // 
+            // Example15
+            // 
+            this.Example15.Name = "Example15";
+            this.Example15.Size = new System.Drawing.Size(1099, 32);
+            this.Example15.Text = "Сфера как совокупность точек";
+            this.Example15.Click += new System.EventHandler(this.Example15_Click);
+            // 
+            // Example16
+            // 
+            this.Example16.Name = "Example16";
+            this.Example16.Size = new System.Drawing.Size(1099, 32);
+            this.Example16.Text = "Конус как совокупность точек";
+            this.Example16.Click += new System.EventHandler(this.Example16_Click);
+            // 
+            // Example17
+            // 
+            this.Example17.Name = "Example17";
+            this.Example17.Size = new System.Drawing.Size(1099, 32);
+            this.Example17.Text = "Комбинация двух конусов";
+            this.Example17.Click += new System.EventHandler(this.Example17_Click);
+            // 
+            // Example18
+            // 
+            this.Example18.Name = "Example18";
+            this.Example18.Size = new System.Drawing.Size(1099, 32);
+            this.Example18.Text = "Объединение трех усеченных конусов";
+            this.Example18.Click += new System.EventHandler(this.Example18_Click);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Example19,
+            this.Example20,
+            this.Example21,
+            this.Example22});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(102, 32);
+            this.toolStripDropDownButton1.Text = "Задания";
+            // 
+            // Example19
+            // 
+            this.Example19.Name = "Example19";
+            this.Example19.Size = new System.Drawing.Size(650, 32);
+            this.Example19.Text = "Сфера вписанная в куб";
+            this.Example19.Click += new System.EventHandler(this.Example19_Click);
+            // 
+            // Example20
+            // 
+            this.Example20.Name = "Example20";
+            this.Example20.Size = new System.Drawing.Size(650, 32);
+            this.Example20.Text = "Тор";
+            this.Example20.Click += new System.EventHandler(this.Example20_Click);
+            // 
+            // Example21
+            // 
+            this.Example21.Name = "Example21";
+            this.Example21.Size = new System.Drawing.Size(650, 32);
+            this.Example21.Text = "Эллипсоид вращения";
+            this.Example21.Click += new System.EventHandler(this.Example21_Click);
+            // 
+            // Example22
+            // 
+            this.Example22.Name = "Example22";
+            this.Example22.Size = new System.Drawing.Size(650, 32);
+            this.Example22.Text = "Шесть сфер разного диаметра установленных друг на друга";
+            this.Example22.Click += new System.EventHandler(this.Example22_Click);
             // 
             // label5
             // 
@@ -370,110 +564,98 @@ namespace _2_laba_Graphics
             this.panel_angle.TabIndex = 22;
             this.panel_angle.Visible = false;
             // 
-            // Example5
+            // button1
             // 
-            this.Example5.Name = "Example5";
-            this.Example5.Size = new System.Drawing.Size(1099, 32);
-            this.Example5.Text = "Поворот точки M (x,y,z) вокруг произвольной оси относительно произвольной точки M" +
-    "0(x0,y0,z0) на угол α";
-            this.Example5.Click += new System.EventHandler(this.Example5_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(808, 628);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 39);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Старт";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Example6
+            // timer1
             // 
-            this.Example6.Name = "Example6";
-            this.Example6.Size = new System.Drawing.Size(1099, 32);
-            this.Example6.Text = "Вращение вокруг вектора, проходящего через начало коордит на угол α";
-            this.Example6.Click += new System.EventHandler(this.Example6_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Example7
+            // button2
             // 
-            this.Example7.Name = "Example7";
-            this.Example7.Size = new System.Drawing.Size(1099, 32);
-            this.Example7.Text = "Вращение вокруг произвольной прямой на угол α";
-            this.Example7.Click += new System.EventHandler(this.Example7_Click);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(906, 628);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 39);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Стоп";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Example8
+            // checkBox_oX
             // 
-            this.Example8.Name = "Example8";
-            this.Example8.Size = new System.Drawing.Size(1099, 32);
-            this.Example8.Text = "Произвольное вращение";
-            this.Example8.Click += new System.EventHandler(this.Example8_Click);
+            this.checkBox_oX.AutoSize = true;
+            this.checkBox_oX.Location = new System.Drawing.Point(3, 3);
+            this.checkBox_oX.Name = "checkBox_oX";
+            this.checkBox_oX.Size = new System.Drawing.Size(47, 21);
+            this.checkBox_oX.TabIndex = 26;
+            this.checkBox_oX.Text = "oX";
+            this.checkBox_oX.UseVisualStyleBackColor = true;
+            this.checkBox_oX.CheckedChanged += new System.EventHandler(this.checkBox_oX_CheckedChanged);
             // 
-            // Example9
+            // checkBox_oY
             // 
-            this.Example9.Name = "Example9";
-            this.Example9.Size = new System.Drawing.Size(1099, 32);
-            this.Example9.Text = "Визуализация вершин куба";
-            this.Example9.Click += new System.EventHandler(this.Example9_Click);
+            this.checkBox_oY.AutoSize = true;
+            this.checkBox_oY.Location = new System.Drawing.Point(3, 31);
+            this.checkBox_oY.Name = "checkBox_oY";
+            this.checkBox_oY.Size = new System.Drawing.Size(47, 21);
+            this.checkBox_oY.TabIndex = 27;
+            this.checkBox_oY.Text = "oY";
+            this.checkBox_oY.UseVisualStyleBackColor = true;
+            this.checkBox_oY.CheckedChanged += new System.EventHandler(this.checkBox_oY_CheckedChanged);
             // 
-            // Example10
+            // checkBox_oZ
             // 
-            this.Example10.Name = "Example10";
-            this.Example10.Size = new System.Drawing.Size(1099, 32);
-            this.Example10.Text = "Визуализация граней куба";
-            this.Example10.Click += new System.EventHandler(this.Example10_Click);
+            this.checkBox_oZ.AutoSize = true;
+            this.checkBox_oZ.Location = new System.Drawing.Point(3, 58);
+            this.checkBox_oZ.Name = "checkBox_oZ";
+            this.checkBox_oZ.Size = new System.Drawing.Size(47, 21);
+            this.checkBox_oZ.TabIndex = 28;
+            this.checkBox_oZ.Text = "oZ";
+            this.checkBox_oZ.UseVisualStyleBackColor = true;
+            this.checkBox_oZ.CheckedChanged += new System.EventHandler(this.checkBox_oZ_CheckedChanged);
             // 
-            // Example11
+            // panel_Check_XYZ
             // 
-            this.Example11.Name = "Example11";
-            this.Example11.Size = new System.Drawing.Size(1099, 32);
-            this.Example11.Text = "Изображение сторон куба. Удаление вкрытых поверхностей";
-            this.Example11.Click += new System.EventHandler(this.Example11_Click);
+            this.panel_Check_XYZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_Check_XYZ.Controls.Add(this.checkBox_oX);
+            this.panel_Check_XYZ.Controls.Add(this.checkBox_oZ);
+            this.panel_Check_XYZ.Controls.Add(this.checkBox_oY);
+            this.panel_Check_XYZ.Location = new System.Drawing.Point(807, 537);
+            this.panel_Check_XYZ.Name = "panel_Check_XYZ";
+            this.panel_Check_XYZ.Size = new System.Drawing.Size(55, 85);
+            this.panel_Check_XYZ.TabIndex = 29;
+            this.panel_Check_XYZ.Visible = false;
             // 
-            // Example12
+            // button_sbros
             // 
-            this.Example12.Name = "Example12";
-            this.Example12.Size = new System.Drawing.Size(1099, 32);
-            this.Example12.Text = "Параллелипед, как совокупность точек";
-            this.Example12.Click += new System.EventHandler(this.Example12_Click);
-            // 
-            // Example13
-            // 
-            this.Example13.Name = "Example13";
-            this.Example13.Size = new System.Drawing.Size(1099, 32);
-            this.Example13.Text = "Пирамида как совокупность точке";
-            this.Example13.Click += new System.EventHandler(this.Example13_Click);
-            // 
-            // Example14
-            // 
-            this.Example14.Name = "Example14";
-            this.Example14.Size = new System.Drawing.Size(1099, 32);
-            this.Example14.Text = "Цилиндр как совокупность точек";
-            this.Example14.Click += new System.EventHandler(this.Example14_Click);
-            // 
-            // Example15
-            // 
-            this.Example15.Name = "Example15";
-            this.Example15.Size = new System.Drawing.Size(1099, 32);
-            this.Example15.Text = "Сфера как совокупность точек";
-            this.Example15.Click += new System.EventHandler(this.Example15_Click);
-            // 
-            // Example16
-            // 
-            this.Example16.Name = "Example16";
-            this.Example16.Size = new System.Drawing.Size(1099, 32);
-            this.Example16.Text = "Конус как совокупность точек";
-            this.Example16.Click += new System.EventHandler(this.Example16_Click);
-            // 
-            // Example17
-            // 
-            this.Example17.Name = "Example17";
-            this.Example17.Size = new System.Drawing.Size(1099, 32);
-            this.Example17.Text = "Комбинация двух конусов";
-            this.Example17.Click += new System.EventHandler(this.Example17_Click);
-            // 
-            // Example18
-            // 
-            this.Example18.Name = "Example18";
-            this.Example18.Size = new System.Drawing.Size(1099, 32);
-            this.Example18.Text = "Объединение трех усеченных конусов";
-            this.Example18.Click += new System.EventHandler(this.Example18_Click);
+            this.button_sbros.Location = new System.Drawing.Point(869, 537);
+            this.button_sbros.Name = "button_sbros";
+            this.button_sbros.Size = new System.Drawing.Size(96, 52);
+            this.button_sbros.TabIndex = 30;
+            this.button_sbros.Text = "Сброс";
+            this.button_sbros.UseVisualStyleBackColor = true;
+            this.button_sbros.Click += new System.EventHandler(this.button_sbros_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 683);
+            this.Controls.Add(this.button_sbros);
+            this.Controls.Add(this.panel_Check_XYZ);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_angle);
             this.Controls.Add(this.panel_XYZ1);
             this.Controls.Add(this.panel_XYZ);
@@ -481,6 +663,9 @@ namespace _2_laba_Graphics
             this.Controls.Add(this.panel_drawing);
             this.Name = "MainForm";
             this.Text = "Лабораторная работа №2";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.panel_drawing.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Pitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Yaw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Roll)).EndInit();
@@ -496,6 +681,8 @@ namespace _2_laba_Graphics
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_angle_alpha)).EndInit();
             this.panel_angle.ResumeLayout(false);
             this.panel_angle.PerformLayout();
+            this.panel_Check_XYZ.ResumeLayout(false);
+            this.panel_Check_XYZ.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,6 +728,21 @@ namespace _2_laba_Graphics
 		private System.Windows.Forms.ToolStripMenuItem Example16;
 		private System.Windows.Forms.ToolStripMenuItem Example17;
 		private System.Windows.Forms.ToolStripMenuItem Example18;
+		private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+		private System.Windows.Forms.ToolStripMenuItem Example19;
+		private System.Windows.Forms.ToolStripMenuItem Example20;
+		private System.Windows.Forms.ToolStripMenuItem Example21;
+		private System.Windows.Forms.ToolStripMenuItem Example22;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Button button2;
+		private Tao.Platform.Windows.SimpleOpenGlControl siOGlC;
+		private System.Windows.Forms.CheckBox checkBox_oX;
+		private System.Windows.Forms.CheckBox checkBox_oY;
+		private System.Windows.Forms.CheckBox checkBox_oZ;
+		private System.Windows.Forms.Panel panel_Check_XYZ;
+		private System.Windows.Forms.Button button_sbros;
 	}
 }
 
