@@ -639,6 +639,7 @@ namespace _2_laba_Graphics
             // 
             // button_sbros
             // 
+            this.button_sbros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_sbros.Location = new System.Drawing.Point(869, 537);
             this.button_sbros.Name = "button_sbros";
             this.button_sbros.Size = new System.Drawing.Size(96, 52);

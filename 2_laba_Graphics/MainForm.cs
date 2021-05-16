@@ -57,7 +57,6 @@ namespace _2_laba_Graphics
 		Example_18 ex18;
 		Example_19 ex19;
 
-
 		private void trackBar_Pitch_Scroll(object sender, EventArgs e)
 		{	// Событие на перемещение ползунка в trackBar
 			scrollAxis = 0;
@@ -375,14 +374,15 @@ namespace _2_laba_Graphics
 		{   // Выбор 20 примера
 			//_tor = new DrawTor();
 			//mode = 20;
-			comand = 2;
+
 			//pictureBox1.Visible = true;
-			panel_XYZ.Visible = true;
-			panel_XYZ1.Visible = false;
-			panel_angle.Visible = true;
 			//panel_drawing.Refresh();
 			//button1.Visible = true;
 			//button2.Visible = true;
+			comand = 2;
+			panel_XYZ.Visible = true;
+			panel_XYZ1.Visible = false;
+			panel_angle.Visible = true;
 			siOGlC.Visible = true;
 			panel_Check_XYZ.Visible = true;
 		}
@@ -430,7 +430,7 @@ namespace _2_laba_Graphics
 		{
 			Draw(typeDraw);
 			_tor.Speed = i + 1;
-			i++;
+			i+= 1;
 		}
 
 		// ряд вспомогательных переменных
@@ -464,7 +464,7 @@ namespace _2_laba_Graphics
 		{
 			oX = oY = oZ = 0;
 			X = Y = Z = 1;
-			trackBar_angle_alpha.Value = 1*factor;
+			trackBar_angle_alpha.Value = 1;
 			trackBar_Pitch.Value = 57;
 			trackBar_Roll.Value = 57;
 			trackBar_Yaw.Value = 1;
